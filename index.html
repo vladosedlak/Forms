@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Discovery checklist – Digitalizácia procesov</title>
+<style>
+:root{--p:#0f6cbd;--pd:#0b4f8a;--bg:#f4f7fb;--card:#fff;--txt:#1f2937;--muted:#5f6b7a;--bd:#d7dee8;--ok:#107c10}*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}header{background:linear-gradient(135deg,var(--pd),var(--p));color:#fff;padding:32px 20px}header div,main,footer{max-width:900px;margin:auto}h1{margin:0 0 6px;font-size:29px}header p{margin:0}.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:22px;margin:18px 0;box-shadow:0 2px 8px #0000000a}h2{margin:0 0 18px;color:var(--pd);font-size:21px}.q{margin-bottom:18px}label,legend{font-weight:600;display:block;margin-bottom:6px}input[type=text],input[type=number],textarea{width:100%;padding:10px;border:1px solid #aeb8c5;border-radius:6px;font:inherit}textarea{min-height:90px;resize:vertical}.opts{display:flex;gap:18px;flex-wrap:wrap}.opts label{font-weight:400;margin:0}fieldset{border:0;padding:0;margin:0 0 18px}.actions{position:sticky;bottom:0;padding:14px 0;background:#f4f7fbf2;border-top:1px solid var(--bd);display:flex;gap:10px;flex-wrap:wrap}button{border:0;border-radius:6px;padding:11px 16px;font:inherit;font-weight:600;cursor:pointer}.primary{background:var(--p);color:white}.secondary{background:#e8edf3}.status{color:var(--ok);font-weight:600;align-self:center}footer{padding:0 16px 28px;color:var(--muted);font-size:13px}@media(max-width:600px){h1{font-size:24px}.card{padding:17px}}
+</style></head>
+<body><header><div><h1>Discovery checklist – Digitalizácia procesov</h1><p>SharePoint Online &amp; Microsoft Power Platform</p></div></header>
+<main><form id="f">
+<section class="card"><h2>Základné údaje</h2><div class="q"><label for="company">Názov spoločnosti</label><input id="company" name="Názov spoločnosti" type="text"></div></section>
+
+<section class="card"><h2>1. Procesy</h2>
+<div class="q"><label for="processes">Vymenujte procesy, ktoré chcete digitalizovať</label><textarea id="processes" name="Procesy na digitalizáciu" placeholder="Uveďte názvy jednotlivých procesov, každý ideálne na samostatný riadok."></textarea></div>
+<fieldset><legend>Viete poskytnúť diagramy procesov?</legend><div class="opts"><label><input type="radio" name="Dostupnosť diagramov procesov" value="Áno"> Áno</label><label><input type="radio" name="Dostupnosť diagramov procesov" value="Nie"> Nie</label><label><input type="radio" name="Dostupnosť diagramov procesov" value="Čiastočne"> Čiastočne</label></div></fieldset>
+<div class="q"><label for="diagramsNote">Poznámka k diagramom procesov</label><textarea id="diagramsNote" name="Poznámka k diagramom procesov" placeholder="Napr. formát diagramov, pre ktoré procesy sú dostupné alebo kedy ich viete dodať."></textarea></div>
+<div class="q"><label for="today">Ako sú procesy realizované dnes?</label><textarea id="today" name="Súčasný spôsob realizácie" placeholder="Napr. papier, e-mail, Excel alebo existujúci systém."></textarea></div>
+<div class="q"><label for="exceptions">Existujú výnimky alebo špeciálne scenáre?</label><textarea id="exceptions" name="Výnimky a špeciálne scenáre"></textarea></div>
+</section>
+
+<section class="card"><h2>2. Formuláre</h2>
+<div class="q"><label for="dependencies">Existujú závislosti medzi poľami alebo podmienené zobrazovanie polí?</label><textarea id="dependencies" name="Závislosti medzi poľami"></textarea></div>
+<fieldset><legend>Sú potrebné prílohy?</legend><div class="opts"><label><input type="radio" name="Prílohy" value="Áno"> Áno</label><label><input type="radio" name="Prílohy" value="Nie"> Nie</label><label><input type="radio" name="Prílohy" value="Nevieme"> Nevieme</label></div></fieldset>
+<div class="q"><label for="attachments">Poznámka k prílohám</label><textarea id="attachments" name="Poznámka k prílohám" placeholder="Typy súborov, približná veľkosť, počet príloh alebo iné obmedzenia."></textarea></div>
+</section>
+
+<section class="card"><h2>3. Workflow a schvaľovanie</h2>
+<div class="q"><label for="approval">Popíšte schvaľovací proces a počet úrovní</label><textarea id="approval" name="Schvaľovací proces"></textarea></div>
+<fieldset><legend>Ako sa určujú schvaľovatelia?</legend><div class="opts"><label><input type="radio" name="Určenie schvaľovateľov" value="Pevne"> Pevne</label><label><input type="radio" name="Určenie schvaľovateľov" value="Dynamicky"> Dynamicky</label><label><input type="radio" name="Určenie schvaľovateľov" value="Kombinovane"> Kombinovane</label></div></fieldset>
+<div class="q"><label for="notifications">Aké notifikácie, termíny alebo eskalácie požadujete?</label><textarea id="notifications" name="Notifikácie, termíny a eskalácie"></textarea></div>
+<fieldset><legend>Je potrebná auditná stopa?</legend><div class="opts"><label><input type="radio" name="Auditná stopa" value="Áno"> Áno</label><label><input type="radio" name="Auditná stopa" value="Nie"> Nie</label><label><input type="radio" name="Auditná stopa" value="Nevieme"> Nevieme</label></div></fieldset>
+</section>
+
+<section class="card"><h2>4. Licencie</h2>
+<div class="q"><label for="licenses">Majú všetci používatelia potrebné Microsoft 365 a Power Apps licencie?</label><textarea id="licenses" name="Licencie používateľov" placeholder="Uveďte dostupné licenčné plány alebo informáciu, ak to ešte nie je overené."></textarea></div>
+</section>
+
+<section class="card"><h2>5. Objem a prevádzka</h2>
+<div class="q"><label for="volume">Aký počet žiadostí očakávate mesačne alebo ročne a aký je predpoklad rastu?</label><textarea id="volume" name="Objem žiadostí a rast"></textarea></div>
+<div class="q"><label for="peaks">Existujú sezónne špičky alebo kritické požiadavky na rýchlosť spracovania?</label><textarea id="peaks" name="Špičky a výkon"></textarea></div>
+</section>
+
+<section class="card"><h2>6. Integrácie</h2>
+<fieldset><legend>Je potrebná integrácia s inými systémami?</legend><div class="opts"><label><input type="radio" name="Potrebná integrácia" value="Áno"> Áno</label><label><input type="radio" name="Potrebná integrácia" value="Nie"> Nie</label><label><input type="radio" name="Potrebná integrácia" value="Nevieme"> Nevieme</label></div></fieldset>
+<div class="q"><label for="integrationNote">Poznámka k integráciám</label><textarea id="integrationNote" name="Poznámka k integráciám" placeholder="Ak áno, uveďte systémy a stručne popíšte potrebnú výmenu údajov."></textarea></div>
+</section>
+
+<section class="card"><h2>7. Elektronický podpis</h2>
+<fieldset><legend>Je potrebné elektronické podpisovanie?</legend><div class="opts"><label><input type="radio" name="Elektronický podpis" value="Áno"> Áno</label><label><input type="radio" name="Elektronický podpis" value="Nie"> Nie</label><label><input type="radio" name="Elektronický podpis" value="Nevieme"> Nevieme</label></div></fieldset>
+<div class="q"><label for="signatureNote">Poznámka k elektronickému podpisu</label><textarea id="signatureNote" name="Poznámka k elektronickému podpisu" placeholder="Ak áno, uveďte požadovaný typ alebo preferované riešenie."></textarea></div>
+</section>
+
+<section class="card"><h2>8. Reporting</h2>
+<div class="q"><label for="reporting">Aké reporty, KPI, dashboardy alebo exporty potrebujete?</label><textarea id="reporting" name="Reporting a analytika"></textarea></div>
+</section>
+
+<section class="card"><h2>9. Budúce rozšírenie</h2>
+<div class="q"><label for="future">Aké ďalšie procesy plánujete digitalizovať v budúcnosti?</label><textarea id="future" name="Budúce procesy"></textarea></div>
+<div class="q"><label for="configuration">Čo má byť možné meniť alebo dopĺňať bez zásahu vývojára?</label><textarea id="configuration" name="Požadovaná konfigurovateľnosť"></textarea></div>
+<div class="q"><label for="standardization">Ako sú si procesy podobné a aká miera štandardizácie je akceptovateľná?</label><textarea id="standardization" name="Podobnosť a štandardizácia procesov"></textarea></div>
+</section>
+
+<section class="card"><h2>10. Kritériá úspechu</h2>
+<div class="q"><label for="success">Ako budete hodnotiť úspešnosť riešenia po nasadení?</label><textarea id="success" name="Kritériá úspechu" placeholder="Napr. kratší čas spracovania, menej e-mailov, auditovateľnosť alebo spokojnosť používateľov."></textarea></div>
+<div class="q"><label for="notes">Ďalšie poznámky</label><textarea id="notes" name="Ďalšie poznámky"></textarea></div>
+</section>
+
+<div class="actions"><button type="button" class="primary" id="download">Stiahnuť vyplnený checklist (.txt)</button><button type="button" class="secondary" id="save">Uložiť rozpracované</button><button type="button" class="secondary" id="clear">Vymazať</button><span id="status" class="status"></span></div>
+</form></main><footer>Údaje sa neposielajú na server. TXT súbor sa vytvorí lokálne v prehliadači.</footer>
+<script>
+const f=document.getElementById('f'),status=document.getElementById('status');
+function section(el){return el.closest('section')?.querySelector('h2')?.textContent||'Základné údaje'}
+function text(){let out=`DISCOVERY CHECKLIST – DIGITALIZÁCIA PROCESOV
+SharePoint Online & Microsoft Power Platform
+`,cur='';const groups=new Map();[...f.elements].filter(e=>e.name).forEach(e=>{const k=section(e)+'||'+e.name;if(!groups.has(k))groups.set(k,{s:section(e),n:e.name,v:[]});if((e.type==='radio'||e.type==='checkbox')?e.checked:e.value.trim())groups.get(k).v.push(e.value.trim())});groups.forEach(g=>{if(g.s!==cur){cur=g.s;out+=`
+============================================================
+${cur.toUpperCase()}
+============================================================
+`}out+=`
+${g.n}:
+${g.v.length?g.v.join(', '):'[Bez odpovede]'}
+`});return out}
+document.getElementById('download').onclick=()=>{const b=new Blob(['﻿'+text()],{type:'text/plain;charset=utf-8'}),a=document.createElement('a'),c=(document.getElementById('company').value||'zakaznik').replace(/[^a-zA-Z0-9_-]+/g,'_');a.href=URL.createObjectURL(b);a.download='discovery_checklist_'+c+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500);status.textContent='TXT súbor bol vytvorený.'};
+document.getElementById('save').onclick=()=>{const d=[...f.elements].map(e=>(e.type==='radio'||e.type==='checkbox')?e.checked:e.value);localStorage.setItem('discoveryChecklistSimple',JSON.stringify(d));status.textContent='Rozpracovaný formulár bol uložený.'};
+document.getElementById('clear').onclick=()=>{if(confirm('Naozaj chcete vymazať formulár?')){f.reset();localStorage.removeItem('discoveryChecklistSimple');status.textContent='Formulár bol vymazaný.'}};
+window.onload=()=>{const r=localStorage.getItem('discoveryChecklistSimple');if(r){const d=JSON.parse(r);[...f.elements].forEach((e,i)=>{if(d[i]!==undefined){if(e.type==='radio'||e.type==='checkbox')e.checked=d[i];else e.value=d[i]}});status.textContent='Načítaná uložená verzia.'}};
+</script></body></html>
